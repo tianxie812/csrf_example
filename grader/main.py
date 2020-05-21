@@ -1,10 +1,11 @@
 import os
 import base64
 
-from flask import Flask, request
+from flask import Flask, request, session
 from model import Grade 
 
 app = Flask(__name__)
+app.secret_key = "dFbVyccvTuNpkUP2x6vcnZWN"
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
